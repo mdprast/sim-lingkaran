@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#E0E7FF" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle with safe margin -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Orbit decorative rings -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="4" stroke-dasharray="12 12" />
+  <circle cx="256" cy="256" r="170" fill="url(#circleGrad)" filter="url(#shadow)" />
+
+  <!-- Circumference ring -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#4F46E5" stroke-width="14" stroke-linecap="round" />
+
+  <!-- Radius line (Center to right) -->
+  <line x1="256" y1="256" x2="416" y2="256" stroke="#F59E0B" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 0" />
+
+  <!-- Center Point -->
+  <circle cx="256" cy="256" r="16" fill="#EF4444" stroke="#FFFFFF" stroke-width="4" />
+
+  <!-- Phi Greek symbol in center-top -->
+  <g transform="translate(256, 210) scale(1.1)">
+    <text text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="120" fill="#312E81" opacity="0.9">π</text>
+  </g>
+
+  <!-- Label 'r' along radius -->
+  <circle cx="340" cy="230" r="22" fill="#F59E0B" />
+  <text x="340" y="238" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" font-size="24" fill="#FFFFFF">r</text>
+
+  <!-- Decorative sparkles -->
+  <path d="M140 130 Q140 145 155 145 Q140 145 140 160 Q140 145 125 145 Q140 145 140 130 Z" fill="#FDE047" />
+  <path d="M380 370 Q380 382 392 382 Q380 382 380 394 Q380 382 368 382 Q380 382 380 370 Z" fill="#FDE047" />
+</svg>
